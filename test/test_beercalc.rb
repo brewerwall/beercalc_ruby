@@ -39,7 +39,8 @@ class BeercalcTest < Test::Unit::TestCase
     assert_equal nil, Beercalc.aau(4, nil)
     assert_equal nil, Beercalc.aau(nil, nil)
     assert_equal nil, Beercalc.aau("asdf", "asdf")
-    assert_equal 25, Beercalc.aau(5, 5)
+    assert_equal 9.600000000000001, Beercalc.aau(1.5, 6.4) # Based off Palmer's Calculation
+    assert_equal 4.6, Beercalc.aau(1, 4.6) # Based off Palmer's Calculation
   end
 
   def test_ibu
