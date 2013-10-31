@@ -8,6 +8,12 @@ class BeercalcTest < Test::Unit::TestCase
     assert_equal nil, Beercalc.abv("asdf", "asdf")
   end
 
+  def test_abw
+    assert_equal 5.691949999999994, Beercalc.abw(1.055, 1)
+    assert_equal nil, Beercalc.abv(1, 1.055)
+    assert_equal nil, Beercalc.abv("asdf", "asdf")
+  end
+
   def test_utilization
     assert_equal 0.08363227080582435, Beercalc.utilization(10, 1.050)
     assert_equal 0.30113013986478654, Beercalc.utilization(120, 1.030)
@@ -52,5 +58,52 @@ class BeercalcTest < Test::Unit::TestCase
     assert_equal nil, Beercalc.ibu(nil, nil, nil, nil, 5)
     assert_equal nil, Beercalc.ibu(nil, nil, nil, 1.080, nil)
     assert_equal nil, Beercalc.ibu(4.6, 1, 15, 1.080, "asdf")
+  end
+
+  def test_plato
+    assert_equal 17.055185000000108, Beercalc.plato(1.070) # Based on http://hbd.org/ensmingr/
+    assert_equal nil, Beercalc.plato(nil)
+    assert_equal nil, Beercalc.plato("asdf")  
+  end
+
+  def test_realExtract
+    assert_equal 6.216277095999994, Beercalc.realExtract(1.070, 1.015) # Based on http://hbd.org/ensmingr/
+    assert_equal nil, Beercalc.realExtract(nil, nil)
+    assert_equal nil, Beercalc.realExtract("asdf", "asdf")  
+  end
+
+  def test_calories
+    assert_equal 227.57821703464833, Beercalc.calories(1.070, 1.015)
+    assert_equal nil, Beercalc.calories(1, 1.055)
+    assert_equal nil, Beercalc.calories("asdf", "asdf")
+  end
+
+  def test_attenuation
+    assert_equal 0.7777777777777778, Beercalc.attenuation(1.054, 1.012)
+    assert_equal nil, Beercalc.attenuation(1, 1.055)
+    assert_equal nil, Beercalc.attenuation("asdf", "asdf")
+  end
+
+  def test_gravityUnits
+    assert_equal 54, Beercalc.gu(1.054)
+    assert_equal nil, Beercalc.gu("asdf")
+  end
+
+  def test_totalGravity
+    assert_equal 270, Beercalc.totalGravity(1.054, 5)
+    assert_equal nil, Beercalc.totalGravity("asdf", "asdf")
+  end
+
+  def test_finalGravity
+    assert_equal 54, Beercalc.finalGravity(1.054, 5, 5)
+    assert_equal nil, Beercalc.finalGravity("asdf", "asdf", "asdf")
+  end
+
+  def test_extractAddition
+    assert_equal 1.1777777777777778, Beercalc.extractAddition(408, 355, 45)
+    assert_equal 1.1777777777777778, Beercalc.extractAddition(408, 355, 'DME')
+    assert_equal 1.394736842105263, Beercalc.extractAddition(408, 355, 'LME')
+    assert_equal nil, Beercalc.extractAddition('asdf', 'asdf', 'LME')
+    assert_equal nil, Beercalc.extractAddition('asdf', 'asdf', 'asdf')
   end
 end
