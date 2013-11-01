@@ -1,4 +1,4 @@
-# Beercalc 0.0.4
+# Beercalc 0.0.5
 
 Beercalc is a small helper class that holds various calculations to aid in desiging your own beer recipes.  
 
