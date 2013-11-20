@@ -183,3 +183,14 @@ In the even your mash does not produce a high enough gravity, you can add extrac
 Beercalc.extractAddition(408, 355, 'DME')
 => 1.1777777777777778
 ```
+
+### Beercalc.gravityCorrection(temp, g)
+Corrects the gravity reading based on the temperature of the sample.
+
+* temp 			: number - temperature in Fahrenheit
+* g   			: number - gravity
+
+```ruby
+Beercalc.gravityCorrection(100.4, 1.050)
+=> 1.0560765751842796
+```

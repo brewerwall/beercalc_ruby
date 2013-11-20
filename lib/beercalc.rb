@@ -182,4 +182,15 @@ class Beercalc
     end
     return addition  
   end
+
+  ## GRAVITY TEMPERATURE CORRECTION
+  # param temp: number - Temperature in Fahrenheit
+  # param g: number - Gravity from the hydrometer reading
+  def self.gravityCorrection(temp, g)
+    unless !temp.is_a?(Numeric) || !g.is_a?(Numeric)
+      correction = ((1.313454 - 0.132674*temp + 2.057793*10**-3*temp**2 - 2.627634*10**-6*temp**3) * 0.001) + g
+    else
+      correction = nil
+    end
+  end
 end

@@ -106,4 +106,11 @@ class BeercalcTest < Test::Unit::TestCase
     assert_equal nil, Beercalc.extractAddition('asdf', 'asdf', 'LME')
     assert_equal nil, Beercalc.extractAddition('asdf', 'asdf', 'asdf')
   end
+
+  def test_gravityCorrection
+    assert_equal 1.0560765751842796, Beercalc.gravityCorrection(100.4, 1.050)
+    assert_equal nil, Beercalc.gravityCorrection(100.4, 'asdf')
+    assert_equal nil, Beercalc.gravityCorrection('asdf', 1.050)
+    assert_equal nil, Beercalc.gravityCorrection('asdf', 'asdf')
+  end
 end
