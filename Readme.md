@@ -1,4 +1,4 @@
-# Beercalc 0.0.5
+# Beercalc [![Gem Version](https://badge.fury.io/rb/beercalc.png)](http://badge.fury.io/rb/beercalc)
 
 Beercalc is a small helper class that holds various calculations to aid in desiging your own beer recipes.  
 
