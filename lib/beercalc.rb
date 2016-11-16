@@ -5,7 +5,7 @@ class Beercalc
   #  param fg: number - final gravity
   def self.abv(og, fg)
     unless og < fg || !og.is_a?(Numeric) || !fg.is_a?(Numeric)
-      abv = (og - fg) * 131
+      abv = (76.08 * (og - fg) / (1.775 - og)) * (fg / 0.794)
     else
       abv = nil
     end
