@@ -3,13 +3,13 @@ require 'beercalc'
 
 class BeercalcTest < Test::Unit::TestCase
   def test_abv
-    assert_equal 7.204999999999992, Beercalc.abv(1.055, 1)
+    assert_equal 7.319479429051208, Beercalc.abv(1.055, 1)
     assert_equal nil, Beercalc.abv(1, 1.055)
     assert_equal nil, Beercalc.abv("asdf", "asdf")
   end
 
   def test_abw
-    assert_equal 5.691949999999994, Beercalc.abw(1.055, 1)
+    assert_equal 5.782388748950455, Beercalc.abw(1.055, 1)
     assert_equal nil, Beercalc.abv(1, 1.055)
     assert_equal nil, Beercalc.abv("asdf", "asdf")
   end
@@ -73,7 +73,7 @@ class BeercalcTest < Test::Unit::TestCase
   end
 
   def test_calories
-    assert_equal 227.57821703464833, Beercalc.calories(1.070, 1.015)
+    assert_equal 234.97692128247783, Beercalc.calories(1.070, 1.015)
     assert_equal nil, Beercalc.calories(1, 1.055)
     assert_equal nil, Beercalc.calories("asdf", "asdf")
   end
