@@ -1,4 +1,4 @@
-# <img src="https://user-images.githubusercontent.com/632330/57006043-fb823800-6ba2-11e9-8fa9-eba94b8011b5.png" width="30px"/>  Beercalc [![Gem Version](https://badge.fury.io/rb/beercalc.png)](http://badge.fury.io/rb/beercalc) [![Build Status](https://travis-ci.org/brewerwall/beercalc_ruby.svg?branch=master)](https://travis-ci.org/brewerwall/beercalc_ruby) ![Gem](https://img.shields.io/gem/dv/beercalc/0.0.5)
+# <img src="https://user-images.githubusercontent.com/632330/57006043-fb823800-6ba2-11e9-8fa9-eba94b8011b5.png" width="30px"/>  Beercalc<br/>[![Gem Version](https://badge.fury.io/rb/beercalc.png)](http://badge.fury.io/rb/beercalc) [![Build Status](https://travis-ci.org/brewerwall/beercalc_ruby.svg?branch=master)](https://travis-ci.org/brewerwall/beercalc_ruby) ![Gem](https://img.shields.io/gem/dv/beercalc/0.0.5)
 
 Beercalc is a small helper class that holds various calculations to aid in desiging your own beer recipes.  
 
